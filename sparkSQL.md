@@ -1,6 +1,6 @@
 # 一、创建 DataFrame
 
-在 Spark SQL 中 SparkSession 是创建 DataFrame 和执行 SQL 的入口，创建 DataFrame
+注：在 Spark SQL 中 SparkSession 是创建 DataFrame 和执行 SQL 的入口，创建 DataFrame
 ## 1. 三种方式创建：
 ### ① 通过 Spark 的数据源进行创建；
     val df = spark.read.json("data/user.json")
@@ -96,7 +96,7 @@ DataSet-----**rdd**----->RDD
 	df: org.apache.spark.sql.DataFrame = [name: string, age: int]
 	scala> val ds = df.as[User]
 	ds: org.apache.spark.sql.Dataset[User] = [name: string, age: int]
-###DataSet 转换为 DataFrame
+### DataSet 转换为 DataFrame
 
 	scala> val ds = df.as[User]
 	ds: org.apache.spark.sql.Dataset[User] = [name: string, age: int]
@@ -165,6 +165,6 @@ DataFrame 其实就是 DataSet 的一个特例 type DataFrame = Dataset[Row]
 
 # 六. 数据访问方式
 
-## 1. DataSet.show , DataFrame.show
-## 2. 创建临时表后，spark . sql ( " select * (Dataset可以用 ‘.属性’访问)  from  表名 " )
+### 1. DataSet.show , DataFrame.show
+### 2. 创建临时表后，spark . sql ( " select * (Dataset可以用 ‘.属性’访问)  from  表名 " )
 
