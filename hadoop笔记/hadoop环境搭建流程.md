@@ -153,16 +153,16 @@
 #### 1.通过浏览器访问hadoop102:9870和hadoop103:8088
 #### 2.添加yarn配置hadoop classpath
 
-##第十二步
+## 第十二步
 #### 1.配置历史服务器
 #### 2.重启yarn
 #### 3.启动历史服务器
 #### 4.mapred --daemon start historyserver
 
-##第十三步
+## 第十三步
 #### hadoop集群刚启动的时候会处于安全模式
 #### 退出安全模式hadoop dfsadmin -safemode leave
-####测试
+#### 测试
 	hadoop fs -mkdir /input
 	hadoop fs -put wcinput/word.txt /input
 	hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.2.jar wordcount /input /output
@@ -235,11 +235,11 @@
 	done
 
 ## 第十六步
-####可以配置时间服务器，方便不能连接外网的生产环境同步时间
+#### 可以配置时间服务器，方便不能连接外网的生产环境同步时间
 
 ## 第十七步
-####为了让用户可以在HDFS页面上上进行操作
-####需要在在core-site.xml中添加
+#### 为了让用户可以在HDFS页面上上进行操作
+#### 需要在在core-site.xml中添加
 	<!--配置HDFS网页登录使用的静态用户为log-->
 	<property>
 	<name>hadoop.http.staticuser.user</name>
@@ -247,5 +247,5 @@
 	</property>
 	</configuration>
 
-##hadoop搭建完成
+## hadoop搭建完成
 ## 个人遇到的其中一个严重问题，namenode关不掉：需要配置pid！
