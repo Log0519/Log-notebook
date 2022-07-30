@@ -144,7 +144,7 @@
 #### 再在hadoop103上启动yarn-dfs.sh
 
 ## 第十步
-###配置windows的hosts映射，给当前window用户修改host文件的权限，然后添加
+### 配置windows的hosts映射，给当前window用户修改host文件的权限，然后添加
 	192.168.10.102  hadoop102
 	192.168.10.103  hadoop103
 	192.168.10.104  hadoop104
@@ -248,4 +248,4 @@
 	</configuration>
 
 ## hadoop搭建完成
-## 个人遇到的其中一个严重问题，namenode关不掉：需要配置pid！
+## 个人遇到的其中一个问题，namenode关不掉：此时需要配置pid！
