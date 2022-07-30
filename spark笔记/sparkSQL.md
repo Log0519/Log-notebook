@@ -1,6 +1,6 @@
 # 一、创建 DataFrame
 
-在 Spark SQL 中 SparkSession 是创建 DataFrame 和执行 SQL 的入口，创建 DataFrame
+注：在 Spark SQL 中 SparkSession 是创建 DataFrame 和执行 SQL 的入口，创建 DataFrame
 ## 1. 三种方式创建：
 ### ① 通过 Spark 的数据源进行创建；
     val df = spark.read.json("data/user.json")
@@ -72,7 +72,7 @@ DataSet 其实也是对 RDD 的封装，所以可以直接获取内部的 RDD
     res12: Array[User] = Array(User(zhangsan,30), User(lisi,49))
 
 # 四、DataFrame 和 DataSet 转换
-### DataFrame 其实是 DataSet 的特例，所以它们之间是可以互相转换的。
+### 1. DataFrame 其实是 DataSet 的特例，所以它们之间是可以互相转换的。
 
 ### <font color=#FF0000>数据包含关系：DataSet > DataFrame > RDD ,从高转换到低很方便，低转换到高要给出高所需要的条件，DataFrame需要数据代表的意思，DataSet需要数据类型,DataFrame,DataSet都可以创建临时表</font>
 
@@ -96,7 +96,7 @@ DataSet-----**rdd**----->RDD
 	df: org.apache.spark.sql.DataFrame = [name: string, age: int]
 	scala> val ds = df.as[User]
 	ds: org.apache.spark.sql.Dataset[User] = [name: string, age: int]
-###DataSet 转换为 DataFrame
+### 2. DataSet 转换为 DataFrame
 
 	scala> val ds = df.as[User]
 	ds: org.apache.spark.sql.Dataset[User] = [name: string, age: int]
@@ -165,6 +165,6 @@ DataFrame 其实就是 DataSet 的一个特例 type DataFrame = Dataset[Row]
 
 # 六. 数据访问方式
 
-## 1. DataSet.show , DataFrame.show
-## 2. 创建临时表后，spark . sql ( " select * (Dataset可以用 ‘.属性’访问)  from  表名 " )
+### 1. DataSet.show , DataFrame.show
+### 2. 创建临时表后，spark . sql ( " select * (Dataset可以用 ‘.属性’访问)  from  表名 " )
 
