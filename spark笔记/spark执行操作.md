@@ -67,7 +67,7 @@
 	./examples/jars/spark-examples_2.12-3.0.0.jar \
 	10
 
-##6.在windows环境下
+## 6.在windows环境下
 1.Windows环境下，配置好jdk，scala，hadoop（以及hadoop扩展包，放在hadoop的bin目录下）的环境变量
 
 2.启动bin目录下的spark-shell.cmd
